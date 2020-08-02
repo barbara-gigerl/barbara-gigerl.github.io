@@ -5,7 +5,7 @@
   body {
     font-family: 'Noto Sans';
     padding: 10px;
-    background: #f1f1f1;
+    background: whitesmoke;
   }
   
   /* Header/Blog Title */
@@ -16,7 +16,15 @@
     overflow: hidden;
   }
 
+  h2 {
+    text-align: center;
+  }
 
+  h2.pub_year {
+    text-align: right;
+    font-weight: bold;
+
+  }
   .header img {
       float:left;
       width: 30%;
@@ -29,28 +37,41 @@
   /* Style the top navigation bar */
   .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: white;
     list-style:none;
     text-align:center;
+    font-size: 15pt;
+    font-weight: bold;
 }
     .topnav li {
         display:inline;
     }
   
+  a {
+    color: #1b7385;
+    text-decoration: none;
+  }
+
   /* Style the topnav links */
   .topnav a {
     display: inline-block;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
+
+  
   
   /* Change color on hover */
-  .topnav a:hover {
-    background-color: #ddd;
+   a:hover {
+    background-color: #b0e4ef;
     color: black;
   }
+
+
+
+
   
   /* Create two unequal columns that floats next to each other */
   /* Left column */
@@ -60,17 +81,24 @@
     padding: 2% 2%;
   }
   
+  .card {
+    background-color: white;
+  }
+
   .card .leftcolumn{
     float: left;
-    width: 30%;
+    width: 25%;
   }
   /* Right column */
   .card .rightcolumn {
     float: left;
-    width: 70%;
+    width: 75%;
     padding-left: 20px;
   }
 
+  p {
+    line-height: 2;
+  }
   .card .leftcolumn li.twitter {
     list-style-type: none;
     margin-bottom: 10px;
@@ -85,14 +113,19 @@
     background-repeat: no-repeat;
     padding: 3px 0 5px 40px;
   }
-  .card .leftcolumn li.mail {
+  
+  ul.publication {
     list-style-type: none;
-    margin-bottom: 10px;
-    background-image: url('../img/mail.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 3px 0 5px 40px;
   }
+
+  ul.publication .title {
+    font-size: 14pt;
+  }
+
+  ul.publication .authors{
+    font-style: italic;
+  }
+
 
 
   
@@ -106,7 +139,9 @@
   /* Add a card effect for articles */
   .card {
    padding: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
     overflow: hidden;
   }
   
@@ -121,7 +156,7 @@
   .footer {
     padding: 20px;
     text-align: center;
-    background: #ddd;
+    background: white;
     margin-top: 20px;
   }
   
@@ -135,10 +170,22 @@
         width: 100%;
         padding: 0;
     }
+    .card .leftcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+    .card .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
     .header img {
         float:none;
     }
     
+    h2.pub_year {
+      text-align: center;
+  
+    }
 
   }
   
