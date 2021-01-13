@@ -1,203 +1,138 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Noto Sans';
-    padding: 10px;
-    background: whitesmoke;
-  }
-  
-  /* Header/Blog Title */
-  .header {
-    padding: 30px;
-    text-align: center;
-    background: white;
-    overflow: hidden;
-  }
 
-  h2 {
-    text-align: center;
-  }
-
-  h2.pub_year {
-    text-align: right;
-    font-weight: bold;
-
-  }
-  .header img {
-      float:left;
-      width: 30%;
-  }
-  
-  .header h1 {
-    font-size: 40px;
-    margin-top: 70px;
-  }
-  
-  /* Style the top navigation bar */
-  .topnav {
-    overflow: hidden;
-    background-color: white;
-    list-style:none;
-    text-align:center;
-    font-size: 15pt;
-    font-weight: bold;
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('raleway-v18-latin-regular.woff2') format('woff2'),
+       url('raleway-v18-latin-regular.woff') format('woff'); 
 }
-    .topnav li {
-        display:inline;
-    }
-  
-  a {
+
+
+body {
+  background: whitesmoke;
+  font-family: "Raleway";
+  font-size: 14pt;
+  line-height: 1.5;
+
+}
+
+.header {
+  background: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.header_img {
+  width: 30vw;
+  float:left;
+  display: block;
+}
+
+.header_img > img {
+  width: 100%;
+}
+
+.header_text {
+  display: inline-block;
+  width: 30vh;
+  padding-left: 10%;
+  height: 100%;
+  text-align: center;
+}
+
+
+
+.contentblock {
+  background: white;
+}
+
+.contentblock > h1 {
+  text-align: center;
+  font-size: 20pt;
+  font-weight:  normal;
+}
+
+.contentblock > h2 {
+  font-size: 16pt;
+  font-weight: normal;
+}
+
+.contentblock  a {
     color: #1b7385;
     text-decoration: none;
-  }
+}
 
-  /* Style the topnav links */
-  .topnav a {
-    display: inline-block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+.contentblock a:hover {
+  background-color: #b0e4ef;
+  color: black;
+}
 
+
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  list-style:none;
+  text-align:center;
+}
+
+.topnav li {
+  display:inline;
+}
   
-  
-  /* Change color on hover */
-   a:hover {
-    background-color: #b0e4ef;
-    color: black;
-  }
+.topnav a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: black;
+  font-weight: bold;
+  font-size: 20pt;
+}
+
+.topnav a:visited {
+  color: black;
+}
 
 
 
 
-  
-  /* Create two unequal columns that floats next to each other */
-  /* Left column */
-  .leftcolumn {   
-    float: left;
-    width: 100%;
-    padding: 2% 2%;
-  }
-  
-  .card {
-    background-color: white;
-  }
+.footer {
+  background: white;
+  text-align: center;
 
-  .card .leftcolumn{
-    float: left;
-    width: 25%;
-  }
-  /* Right column */
-  .card .rightcolumn {
-    float: left;
-    width: 75%;
-    padding-left: 20px;
-  }
+}
 
-  p {
-    line-height: 2;
-  }
-  .card .leftcolumn li.twitter {
-    list-style-type: none;
-    margin-bottom: 10px;
-    background-image: url('../img/twitter.svg');
-    background-repeat: no-repeat;
-    padding: 3px 0px 5px 40px;
-  } 
-  .card .leftcolumn li.github {
-    list-style-type: none;
-    margin-bottom: 10px;
-    background-image: url('../img/github.svg');
-    background-repeat: no-repeat;
-    padding: 3px 0 5px 40px;
-  }
-  
-  ul.publication {
-    list-style-type: none;
-  }
-
-  ul.publication .title {
-    font-size: 14pt;
-  }
-
-  ul.publication .authors{
-    font-style: italic;
-  }
+.ptitem {
+  margin-left: 5vw;
+  margin-bottom: 2vh;
+}
 
 
 
-  
-  /* Fake image */
-  .fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-  }
-  
-  /* Add a card effect for articles */
-  .card {
-   padding: 20px;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    overflow: hidden;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Footer */
-  .footer {
-    padding: 20px;
-    text-align: center;
-    background: white;
-    margin-top: 20px;
-  }
-  
-  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 800px) {
-    .leftcolumn {   
-      width: 100%;
-      padding: 0;
-    }
-    .rightcolumn {
-        width: 100%;
-        padding: 0;
-    }
-    .card .leftcolumn {   
-      width: 100%;
-      padding: 0;
-    }
-    .card .rightcolumn {
-        width: 100%;
-        padding: 0;
-    }
-    .header img {
-        float:none;
-    }
-    
-    h2.pub_year {
-      text-align: center;
-  
-    }
+.ptitem .ptlink{
+  display: block;
+}
 
-  }
-  
-  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-  @media screen and (max-width: 400px) {
-    .topnav a {
-      float: none;
-      width: 100%;
-    }
+.ptitem .ptauthors  {
+  margin: 0;
+  font-style: italic;
+  font-size: 12pt;
+}
 
-    .header img {
-        float:none;
-    }
-  }
+.ptitem .ptinfo {
+  margin: 0;
+  font-size: 12pt;
+}
+
+
+.header, .footer, .contentblock, .topnav {
+  max-width: 900px;
+  margin: 3vw auto;
+  padding: 1vw;
+}
