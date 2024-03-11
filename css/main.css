@@ -126,6 +126,11 @@ body {
 
 .ptitem .ptauthors  {
   margin: 0;
+  /* font-style: italic; */
+  font-size: 0.9em;
+}
+.ptitem .ptconference  {
+  margin: 0;
   font-style: italic;
   font-size: 0.9em;
 }
